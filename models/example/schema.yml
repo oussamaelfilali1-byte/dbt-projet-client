@@ -1,0 +1,27 @@
+version: 2   # Version de la structure YAML pour dbt
+
+models:
+  - name: client   # Nom du modèle (doit correspondre à client.sql)
+    description: "Table des clients"  # Description du modèle
+
+    columns:
+      - name: client_id
+        description: "Identifiant unique du client"
+        tests:        # On applique des tests automatiques
+          - not_null  # Le champ ne doit pas être vide
+          - unique    # Chaque valeur doit être unique
+
+      - name: nom
+        description: "Nom du client"
+
+      - name: genre
+        description: "Genre du client (H/F)"
+
+      - name: age
+        description: "Âge du client"
+
+      - name: ville
+        description: "Ville de résidence"
+
+      - name: date_inscription
+        description: "Date d'inscription du client"

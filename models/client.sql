@@ -1,0 +1,11 @@
+SELECT
+  client_id,
+  nom,
+  genre,
+  age,
+  ville,
+  date_inscription
+FROM
+`formation-data-ing
+.dataset1_Client
+.client`
